@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(10, 50px); 
+    grid-template-rows: repeat(10, 50px);/* Cambia el número aquí para modificar el tamaño de la grilla */
+    grid-gap: 1px;/* Espacio entre las celdas */
+    margin-left: 100px; 
+  }
+  .paleta {
+    display: paleta;
+    grid-template-rows: repeat(6, 50px); 
+    grid-gap: 10px; /* Espacio entre las celdas */
+  }
+  
+  .cell {
+    width: 50px; /* Tamaño de las celdas */
+    height: 50px;
+    background-color: rgb(255, 255, 255); /* Color de fondo predeterminado */
+    border: 1px solid black; /* Borde de las celdas */
+  }
+  
+  /* Estilos de color para las celdas, agrega tantas clases como desees */
+  .cell.marron {
+    background-color: #b47c24 ;
+  }
+  
+  .cell.verde {
+    background-color:  #1cac1c  ;
+  }
+  
+  .cell.marronOscuro {
+    background-color:#442c04;
+  }
+  .cell.marronClaro {
+    background-color:#d4ac64 ;
+  }
+  .cell.rojo {
+    background-color:#fc0404;
+  }
+  .cell.celeste {
+    background-color:#34acec ;
+  }
+  
+  .color-palette {
+    display: grid;
+    grid-template-columns: repeat(6, 100px);
+    grid-gap: 50px; 
+    margin-bottom: -700px;
+    margin-left: -1000px;
+  }
+  .color {
+    width: 100px; 
+    height: 100px;
+    cursor: pointer; 
+    border-radius: 100%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+  }
