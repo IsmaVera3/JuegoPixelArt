@@ -1,64 +1,55 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-  
-  .grid {
+.grid-container {
     display: grid;
-    grid-template-columns: repeat(10, 50px); 
-    grid-template-rows: repeat(10, 50px);/* Cambia el número aquí para modificar el tamaño de la grilla */
-    grid-gap: 1px;/* Espacio entre las celdas */
-    margin-left: 100px; 
-  }
-  .paleta {
-    display: paleta;
-    grid-template-rows: repeat(6, 50px); 
-    grid-gap: 10px; /* Espacio entre las celdas */
-  }
-  
-  .cell {
-    width: 50px; /* Tamaño de las celdas */
-    height: 50px;
-    background-color: rgb(255, 255, 255); /* Color de fondo predeterminado */
-    border: 1px solid black; /* Borde de las celdas */
-  }
-  
-  /* Estilos de color para las celdas, agrega tantas clases como desees */
-  .cell.marron {
-    background-color: #b47c24 ;
-  }
-  
-  .cell.verde {
-    background-color:  #1cac1c  ;
-  }
-  
-  .cell.marronOscuro {
-    background-color:#442c04;
-  }
-  .cell.marronClaro {
-    background-color:#d4ac64 ;
-  }
-  .cell.rojo {
-    background-color:#fc0404;
-  }
-  .cell.celeste {
-    background-color:#34acec ;
-  }
-  
-  .color-palette {
+    grid-template-columns: repeat(
+        10,
+        55px
+    ); /* Cambia el valor "10" según la cantidad de columnas que desees y el tamaño de las celdas */
+    grid-gap: 1cap; /* Espacio entre celdas, puedes ajustar según tus preferencias */
+}
+
+.grid-item {
+    width: 55px; /* Ancho de cada celda, debe coincidir con el valor usado en "grid-template-columns" */
+    height: 50px; /* Altura de cada celda, puedes ajustar según tus preferencias */
+    border: 0.5px solid #000000;
+    margin-left: 950px;
+}
+
+.palette {
     display: grid;
+    margin-top: 10px;
+    margin-left:50px;
     grid-template-columns: repeat(6, 100px);
-    grid-gap: 50px; 
-    margin-bottom: -700px;
-    margin-left: -1000px;
-  }
-  .color {
-    width: 100px; 
-    height: 100px;
-    cursor: pointer; 
+}
+
+.color {
+    width: 90px;
+    height: 90px;
     border-radius: 100%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
-  }
+
+    margin-right: 20px;
+    cursor: pointer;
+}
+/* Estilos generales para el body y la imagen */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+    display: block; /* Asegura que la imagen no tenga espacios extraños alrededor */
+}
+
+/* Estilos específicos para el contenedor que contiene la imagen */
+.container {
+    position: relative; /* Permite posicionar la imagen dentro de este contenedor */
+    width: 500px; /* Ajusta el ancho del contenedor según tus necesidades */
+    height: 300px; /* Ajusta la altura del contenedor según tus necesidades */
+}
+
+/* Posiciona la imagen dentro del contenedor según tus necesidades */
+img {
+    position: absolute;
+    top: -600px; /* Ajusta la distancia desde la parte superior según tus necesidades */
+    left: 100px; /* Ajusta la distancia desde la izquierda según tus necesidades */
+}
